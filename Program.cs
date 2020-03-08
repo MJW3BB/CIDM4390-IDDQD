@@ -21,7 +21,7 @@ namespace CIDM4390_IDDQD
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseUrls("https://159.65.36.255:5000","https://159.65.36.255:5000");
+                    webBuilder.UseUrls("https://159.65.36.255:5001","https://159.65.36.255:5000");
                     webBuilder.UseStartup<Startup>();
                 });
     }
