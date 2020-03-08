@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-// This needs more stuff!!
+
 
 namespace CIDM4390_IDDQD
 {
@@ -21,6 +21,7 @@ namespace CIDM4390_IDDQD
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("https://159.65.36.255:5000","https://159.65.36.255:5000");
                     webBuilder.UseStartup<Startup>();
                 });
     }
