@@ -1172,6 +1172,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #team .member {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
   text-align: center;
   margin-bottom: 20px;
   background: #000;
