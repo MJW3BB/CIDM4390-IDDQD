@@ -103,3 +103,4 @@ D:\Media\Documents\Code Repository\West Texas A&M University\CIDM4390-IDDQD\obj\
 D:\Media\Documents\Code Repository\West Texas A&M University\CIDM4390-IDDQD\obj\Debug\netcoreapp3.1\CIDM4390-IDDQD.dll
 D:\Media\Documents\Code Repository\West Texas A&M University\CIDM4390-IDDQD\obj\Debug\netcoreapp3.1\CIDM4390-IDDQD.pdb
 D:\Media\Documents\Code Repository\West Texas A&M University\CIDM4390-IDDQD\obj\Debug\netcoreapp3.1\CIDM4390-IDDQD.csproj.CopyComplete
+C:\Users\dubs6\Documents\CodeRepo\CIDM4390-IDDQD\bin\Debug\netcoreapp3.1\package-lock.json
