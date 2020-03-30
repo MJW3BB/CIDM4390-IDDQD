@@ -1,7 +1,7 @@
 # CIDM-4390: 2020SP SOFTWARE SYS DEVEL
 Official Code Repository for the project in coursework enrolled at West Texas A&M University
 
-![Good Luck!](.\resources\img\readmeloading.gif)
+![loadinggif](https://cdn.dribbble.com/users/367877/screenshots/4749882/untitled-16.gif)
 
 ## Members & Roles
 * UI/UX - Walter (Dubs) Lasley
