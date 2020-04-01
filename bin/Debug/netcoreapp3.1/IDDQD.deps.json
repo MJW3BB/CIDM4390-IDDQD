@@ -140,6 +140,7 @@
           "Microsoft.VisualBasic.Core": "10.0.5.0",
           "Microsoft.VisualBasic": "10.0.0.0",
           "Microsoft.Win32.Primitives.Reference": "4.1.2.0",
+          "Microsoft.Win32.Registry.Reference": "4.1.3.0",
           "mscorlib": "4.0.0.0",
           "netstandard": "2.1.0.0",
           "System.AppContext.Reference": "4.2.2.0",
@@ -164,6 +165,7 @@
           "System.Diagnostics.Contracts": "4.0.4.0",
           "System.Diagnostics.Debug.Reference": "4.1.2.0",
           "System.Diagnostics.DiagnosticSource.Reference": "4.0.5.0",
+          "System.Diagnostics.EventLog": "4.0.2.0",
           "System.Diagnostics.FileVersionInfo": "4.0.4.0",
           "System.Diagnostics.Process": "4.2.2.0",
           "System.Diagnostics.StackTrace": "4.1.2.0",
@@ -189,6 +191,7 @@
           "System.IO.FileSystem.Watcher": "4.1.2.0",
           "System.IO.IsolatedStorage": "4.1.2.0",
           "System.IO.MemoryMappedFiles": "4.1.2.0",
+          "System.IO.Pipelines": "4.0.2.0",
           "System.IO.Pipes": "4.1.2.0",
           "System.IO.UnmanagedMemoryStream": "4.1.2.0",
           "System.Linq.Reference": "4.2.2.0",
@@ -244,14 +247,19 @@
           "System.Runtime.Serialization.Json.Reference": "4.0.5.0",
           "System.Runtime.Serialization.Primitives.Reference": "4.2.2.0",
           "System.Runtime.Serialization.Xml": "4.1.5.0",
+          "System.Security.AccessControl.Reference": "4.1.1.0",
           "System.Security.Claims": "4.1.2.0",
           "System.Security.Cryptography.Algorithms.Reference": "4.3.2.0",
+          "System.Security.Cryptography.Cng.Reference": "4.3.3.0",
           "System.Security.Cryptography.Csp.Reference": "4.1.2.0",
           "System.Security.Cryptography.Encoding.Reference": "4.1.2.0",
           "System.Security.Cryptography.Primitives.Reference": "4.1.2.0",
           "System.Security.Cryptography.X509Certificates.Reference": "4.2.2.0",
+          "System.Security.Cryptography.Xml": "4.0.3.0",
           "System.Security": "4.0.0.0",
+          "System.Security.Permissions.Reference": "4.0.3.0",
           "System.Security.Principal": "4.1.2.0",
+          "System.Security.Principal.Windows.Reference": "4.1.1.0",
           "System.Security.SecureString.Reference": "4.1.2.0",
           "System.ServiceModel.Web": "4.0.0.0",
           "System.ServiceProcess": "4.0.0.0",
@@ -276,6 +284,7 @@
           "System.Web": "4.0.0.0",
           "System.Web.HttpUtility": "4.0.2.0",
           "System.Windows": "4.0.0.0",
+          "System.Windows.Extensions": "4.0.1.0",
           "System.Xml": "4.0.0.0",
           "System.Xml.Linq": "4.0.0.0",
           "System.Xml.ReaderWriter.Reference": "4.2.2.0",
@@ -3082,6 +3091,12 @@
         },
         "compileOnly": true
       },
+      "Microsoft.Win32.Registry.Reference/4.1.3.0": {
+        "compile": {
+          "Microsoft.Win32.Registry.dll": {}
+        },
+        "compileOnly": true
+      },
       "mscorlib/4.0.0.0": {
         "compile": {
           "mscorlib.dll": {}
@@ -3223,6 +3238,12 @@
       "System.Diagnostics.DiagnosticSource.Reference/4.0.5.0": {
         "compile": {
           "System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "compileOnly": true
+      },
+      "System.Diagnostics.EventLog/4.0.2.0": {
+        "compile": {
+          "System.Diagnostics.EventLog.dll": {}
         },
         "compileOnly": true
       },
@@ -3373,6 +3394,12 @@
       "System.IO.MemoryMappedFiles/4.1.2.0": {
         "compile": {
           "System.IO.MemoryMappedFiles.dll": {}
+        },
+        "compileOnly": true
+      },
+      "System.IO.Pipelines/4.0.2.0": {
+        "compile": {
+          "System.IO.Pipelines.dll": {}
         },
         "compileOnly": true
       },
@@ -3706,6 +3733,12 @@
         },
         "compileOnly": true
       },
+      "System.Security.AccessControl.Reference/4.1.1.0": {
+        "compile": {
+          "System.Security.AccessControl.dll": {}
+        },
+        "compileOnly": true
+      },
       "System.Security.Claims/4.1.2.0": {
         "compile": {
           "System.Security.Claims.dll": {}
@@ -3715,6 +3748,12 @@
       "System.Security.Cryptography.Algorithms.Reference/4.3.2.0": {
         "compile": {
           "System.Security.Cryptography.Algorithms.dll": {}
+        },
+        "compileOnly": true
+      },
+      "System.Security.Cryptography.Cng.Reference/4.3.3.0": {
+        "compile": {
+          "System.Security.Cryptography.Cng.dll": {}
         },
         "compileOnly": true
       },
@@ -3742,15 +3781,33 @@
         },
         "compileOnly": true
       },
+      "System.Security.Cryptography.Xml/4.0.3.0": {
+        "compile": {
+          "System.Security.Cryptography.Xml.dll": {}
+        },
+        "compileOnly": true
+      },
       "System.Security/4.0.0.0": {
         "compile": {
           "System.Security.dll": {}
         },
         "compileOnly": true
       },
+      "System.Security.Permissions.Reference/4.0.3.0": {
+        "compile": {
+          "System.Security.Permissions.dll": {}
+        },
+        "compileOnly": true
+      },
       "System.Security.Principal/4.1.2.0": {
         "compile": {
           "System.Security.Principal.dll": {}
+        },
+        "compileOnly": true
+      },
+      "System.Security.Principal.Windows.Reference/4.1.1.0": {
+        "compile": {
+          "System.Security.Principal.Windows.dll": {}
         },
         "compileOnly": true
       },
@@ -3895,6 +3952,12 @@
       "System.Windows/4.0.0.0": {
         "compile": {
           "System.Windows.dll": {}
+        },
+        "compileOnly": true
+      },
+      "System.Windows.Extensions/4.0.1.0": {
+        "compile": {
+          "System.Windows.Extensions.dll": {}
         },
         "compileOnly": true
       },
@@ -4396,7 +4459,7 @@
     "NuGet.Frameworks/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
+      "sha512": "sha512-KuqDbPzjOWbUM6gPMbkvdhlQ10roQAoMM7mNZ8hcY/fH+9J4Zc+qT8dLWoNzGyr0OrxQVdZdbSjy/fxwoICgGg==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
     },
@@ -4648,42 +4711,42 @@
     "System.Composition/1.0.31": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I+D26qpYdoklyAVUdqwUBrEIckMNjAYnuPJy/h9dsQItpQwVREkDFs4b4tkBza0kT2Yk48Lcfsv2QQ9hWsh9Iw==",
+      "sha512": "sha512-CbzwbjxT04VU+JzQuPOYfUCybzBtbGZdqGJS9482dDBoBHbt3Zz0QAJ/Cjzpmq5xdL+hhW4FYWf/3wq2OCVXgg==",
       "path": "system.composition/1.0.31",
       "hashPath": "system.composition.1.0.31.nupkg.sha512"
     },
     "System.Composition.AttributedModel/1.0.31": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NHWhkM3ZkspmA0XJEsKdtTt1ViDYuojgSND3yHhTzwxepiwqZf+BCWuvCbjUt4fe0NxxQhUDGJ5km6sLjo9qnQ==",
+      "sha512": "sha512-rhZeg+i71Q0MZjYIdIpyfzKM7E9EsvytXxq+CaZ/vWCV09ZfMnb0MOEkfM4wfKhTo7Xoo3TJkkfTLx8kUCltkg==",
       "path": "system.composition.attributedmodel/1.0.31",
       "hashPath": "system.composition.attributedmodel.1.0.31.nupkg.sha512"
     },
     "System.Composition.Convention/1.0.31": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GLjh2Ju71k6C0qxMMtl4efHa68NmWeIUYh4fkUI8xbjQrEBvFmRwMDFcylT8/PR9SQbeeL48IkFxU/+gd0nYEQ==",
+      "sha512": "sha512-9GFJIdwg0zr8s2KHVVgVikYfPJ/KntH1D79Z7VzCovUZwDNNq66MMKkLJIOCztXsgDdgYKOp3BAYASRS9EvYGw==",
       "path": "system.composition.convention/1.0.31",
       "hashPath": "system.composition.convention.1.0.31.nupkg.sha512"
     },
     "System.Composition.Hosting/1.0.31": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fN1bT4RX4vUqjbgoyuJFVUizAl2mYF5VAb+bVIxIYZSSc0BdnX+yGAxcavxJuDDCQ1K+/mdpgyEFc8e9ikjvrg==",
+      "sha512": "sha512-KlZ4qkaa1p/U2WKr353XeQ9bjrxBwn9FcD5k9WFEuV1MloDMnTnhUwQU7h1WigvsCYykzoRdnDLq33wnUPwBeg==",
       "path": "system.composition.hosting/1.0.31",
       "hashPath": "system.composition.hosting.1.0.31.nupkg.sha512"
     },
     "System.Composition.Runtime/1.0.31": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0LEJN+2NVM89CE4SekDrrk5tHV5LeATltkp+9WNYrR+Huiyt0vaCqHbbHtVAjPyeLWIc8dOz/3kthRBj32wGQg==",
+      "sha512": "sha512-iZH3/g2js6fmV3atN2Ym/o+dM2ZMA1GA0GXc70nhbIqK67L29Lh3YrAWiBlyoOIUjNEggA6L4i++7PSID2wMdQ==",
       "path": "system.composition.runtime/1.0.31",
       "hashPath": "system.composition.runtime.1.0.31.nupkg.sha512"
     },
     "System.Composition.TypedParts/1.0.31": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0Zae/FtzeFgDBBuILeIbC/T9HMYbW4olAmi8XqqAGosSOWvXfiQLfARZEhiGd0LVXaYgXr0NhxiU1LldRP1fpQ==",
+      "sha512": "sha512-H6fLWxFy+cy+YsHRcvUBskvDYkpDdUJky+GkqYvi8B/5cm/KIQ5QVDOLKuul4PHFZ/x0yRacS8CpY3x/PxiBeA==",
       "path": "system.composition.typedparts/1.0.31",
       "hashPath": "system.composition.typedparts.1.0.31.nupkg.sha512"
     },
@@ -5715,6 +5778,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Win32.Registry.Reference/4.1.3.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "mscorlib/4.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -5831,6 +5899,11 @@
       "sha512": ""
     },
     "System.Diagnostics.DiagnosticSource.Reference/4.0.5.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Diagnostics.EventLog/4.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5956,6 +6029,11 @@
       "sha512": ""
     },
     "System.IO.MemoryMappedFiles/4.1.2.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IO.Pipelines/4.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6235,12 +6313,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "System.Security.AccessControl.Reference/4.1.1.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "System.Security.Claims/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
     "System.Security.Cryptography.Algorithms.Reference/4.3.2.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Security.Cryptography.Cng.Reference/4.3.3.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6265,12 +6353,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "System.Security.Cryptography.Xml/4.0.3.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "System.Security/4.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
+    "System.Security.Permissions.Reference/4.0.3.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "System.Security.Principal/4.1.2.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Security.Principal.Windows.Reference/4.1.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6391,6 +6494,11 @@
       "sha512": ""
     },
     "System.Windows/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Windows.Extensions/4.0.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj": {}
+    "C:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\IDDQD.csproj": {}
   },
   "projects": {
-    "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj": {
+    "C:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\IDDQD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj",
+        "projectUniqueName": "C:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\IDDQD.csproj",
         "projectName": "IDDQD",
-        "projectPath": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj",
-        "packagesPath": "C:\\Users\\mjweb\\.nuget\\packages\\",
-        "outputPath": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\obj\\",
+        "projectPath": "C:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\IDDQD.csproj",
+        "packagesPath": "C:\\Users\\dubs6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mjweb\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\dubs6\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

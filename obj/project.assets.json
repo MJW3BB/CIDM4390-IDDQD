@@ -4421,7 +4421,7 @@
       ]
     },
     "NuGet.Frameworks/4.7.0": {
-      "sha512": "qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
+      "sha512": "KuqDbPzjOWbUM6gPMbkvdhlQ10roQAoMM7mNZ8hcY/fH+9J4Zc+qT8dLWoNzGyr0OrxQVdZdbSjy/fxwoICgGg==",
       "type": "package",
       "path": "nuget.frameworks/4.7.0",
       "files": [
@@ -5323,7 +5323,7 @@
       ]
     },
     "System.Composition/1.0.31": {
-      "sha512": "I+D26qpYdoklyAVUdqwUBrEIckMNjAYnuPJy/h9dsQItpQwVREkDFs4b4tkBza0kT2Yk48Lcfsv2QQ9hWsh9Iw==",
+      "sha512": "CbzwbjxT04VU+JzQuPOYfUCybzBtbGZdqGJS9482dDBoBHbt3Zz0QAJ/Cjzpmq5xdL+hhW4FYWf/3wq2OCVXgg==",
       "type": "package",
       "path": "system.composition/1.0.31",
       "files": [
@@ -5336,7 +5336,7 @@
       ]
     },
     "System.Composition.AttributedModel/1.0.31": {
-      "sha512": "NHWhkM3ZkspmA0XJEsKdtTt1ViDYuojgSND3yHhTzwxepiwqZf+BCWuvCbjUt4fe0NxxQhUDGJ5km6sLjo9qnQ==",
+      "sha512": "rhZeg+i71Q0MZjYIdIpyfzKM7E9EsvytXxq+CaZ/vWCV09ZfMnb0MOEkfM4wfKhTo7Xoo3TJkkfTLx8kUCltkg==",
       "type": "package",
       "path": "system.composition.attributedmodel/1.0.31",
       "files": [
@@ -5351,7 +5351,7 @@
       ]
     },
     "System.Composition.Convention/1.0.31": {
-      "sha512": "GLjh2Ju71k6C0qxMMtl4efHa68NmWeIUYh4fkUI8xbjQrEBvFmRwMDFcylT8/PR9SQbeeL48IkFxU/+gd0nYEQ==",
+      "sha512": "9GFJIdwg0zr8s2KHVVgVikYfPJ/KntH1D79Z7VzCovUZwDNNq66MMKkLJIOCztXsgDdgYKOp3BAYASRS9EvYGw==",
       "type": "package",
       "path": "system.composition.convention/1.0.31",
       "files": [
@@ -5366,7 +5366,7 @@
       ]
     },
     "System.Composition.Hosting/1.0.31": {
-      "sha512": "fN1bT4RX4vUqjbgoyuJFVUizAl2mYF5VAb+bVIxIYZSSc0BdnX+yGAxcavxJuDDCQ1K+/mdpgyEFc8e9ikjvrg==",
+      "sha512": "KlZ4qkaa1p/U2WKr353XeQ9bjrxBwn9FcD5k9WFEuV1MloDMnTnhUwQU7h1WigvsCYykzoRdnDLq33wnUPwBeg==",
       "type": "package",
       "path": "system.composition.hosting/1.0.31",
       "files": [
@@ -5381,7 +5381,7 @@
       ]
     },
     "System.Composition.Runtime/1.0.31": {
-      "sha512": "0LEJN+2NVM89CE4SekDrrk5tHV5LeATltkp+9WNYrR+Huiyt0vaCqHbbHtVAjPyeLWIc8dOz/3kthRBj32wGQg==",
+      "sha512": "iZH3/g2js6fmV3atN2Ym/o+dM2ZMA1GA0GXc70nhbIqK67L29Lh3YrAWiBlyoOIUjNEggA6L4i++7PSID2wMdQ==",
       "type": "package",
       "path": "system.composition.runtime/1.0.31",
       "files": [
@@ -5396,7 +5396,7 @@
       ]
     },
     "System.Composition.TypedParts/1.0.31": {
-      "sha512": "0Zae/FtzeFgDBBuILeIbC/T9HMYbW4olAmi8XqqAGosSOWvXfiQLfARZEhiGd0LVXaYgXr0NhxiU1LldRP1fpQ==",
+      "sha512": "H6fLWxFy+cy+YsHRcvUBskvDYkpDdUJky+GkqYvi8B/5cm/KIQ5QVDOLKuul4PHFZ/x0yRacS8CpY3x/PxiBeA==",
       "type": "package",
       "path": "system.composition.typedparts/1.0.31",
       "files": [
@@ -8869,24 +8869,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mjweb\\.nuget\\packages\\": {}
+    "C:\\Users\\dubs6\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj",
+      "projectUniqueName": "C:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\IDDQD.csproj",
       "projectName": "IDDQD",
-      "projectPath": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj",
-      "packagesPath": "C:\\Users\\mjweb\\.nuget\\packages\\",
-      "outputPath": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\obj\\",
+      "projectPath": "C:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\IDDQD.csproj",
+      "packagesPath": "C:\\Users\\dubs6\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mjweb\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\dubs6\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8950,7 +8956,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
