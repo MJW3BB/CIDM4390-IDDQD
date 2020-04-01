@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\IDDQD.csproj",
+=======
+  "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj",
+>>>>>>> master
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20521,6 +20525,7 @@
   "RootNamespace": "IDDQD",
   "Documents": [
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
       "FileKind": "mvc"
@@ -20593,6 +20598,80 @@
     {
       "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo1\\CIDM4390-IDDQD 5\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+=======
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Pages\\Index.cshtml",
+      "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Pages\\Shared\\_Layout.cshtml",
+      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Pages\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\Pages\\Privacy.cshtml",
+      "TargetPath": "Pages\\Privacy.cshtml",
+>>>>>>> master
       "FileKind": "mvc"
     }
   ],
