@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace IDDQD.Pages
+namespace CIDM4390_IDDQD.Pages
 {
     public class IndexModel : PageModel
     {
