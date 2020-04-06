@@ -6,52 +6,104 @@
 }
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Home page";
 }
+
+<head>
 
 <h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.KnowledgeElements[0].Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KnowledgeElements[0].Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KnowledgeElements[0].Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.KnowledgeElements) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<!--
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-    <a asp-page="#contact">Back to Site</a>
-</div>
+DIGITAL TREND
+
+https://templatemo.com/tm-538-digital-trend
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="~/css/bootstrap.min.css">
+     <link rel="stylesheet" href="~/css/font-awesome.min.css">
+     <link rel="stylesheet" href="~/css/aos.css">
+     <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="~/css/templatemo-digital-trend.css">
+
+</head>
+
+<body>
+
+     <!-- HERO -->
+     <section class="hero hero-bg d-flex justify-content-center align-items-center">
+        <div class="container" text-color="white">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                        <div class="hero-text">
+
+                            <p>
+                                <a style ="color:white;" asp-page="Create">Create New</a>
+                            </p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th style="color:white;">
+                                            @Html.DisplayNameFor(model => model.KnowledgeElements[0].Title)
+                                        </th>
+                                        <th style="color:white;">
+                                            @Html.DisplayNameFor(model => model.KnowledgeElements[0].Date)
+                                        </th>
+                                        <th style="color:white;">
+                                            @Html.DisplayNameFor(model => model.KnowledgeElements[0].Description)
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            @foreach (var item in Model.KnowledgeElements) {
+                                    <tr>
+                                        <td style="color:white;">
+                                            @Html.DisplayFor(modelItem => item.Title)
+                                        </td>
+                                        <td style="color:white;">
+                                            @Html.DisplayFor(modelItem => item.Date)
+                                        </td>
+                                        <td style="color:white;">
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td style="color:yellow;">
+                                            <a style="color:yellow;" asp-page="./Edit" asp-route-id="@item.ID">| Edit</a> <br>|
+                                            <a style="color:yellow;" asp-page="./Details" asp-route-id="@item.ID">Details</a> <br>|
+                                            <a style="color:yellow;" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                                        </td>
+                                    </tr>
+
+                                    
+                            }
+                                </tbody>
+                            </table>
+                        </div>
+                    <div>
+                        <a style="color:yellow;" asp-page="./Index">Back to List</a><br>
+                        <a style="color:yellow;" asp-page="#contact">Back to Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- SCRIPTS -->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+</body>

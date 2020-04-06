@@ -38,20 +38,20 @@ https://templatemo.com/tm-538-digital-trend
         <div class="container">
             <div class="row">
                 <form id="account" method="post">
-                    <h4>Use a local account to log in.</h4>
+                    <h4 style="color:white;">Use a local account to log in.</h4>
                     <hr />
                     <div asp-validation-summary="All" class="text-danger"></div>
-                    <div class="form-group">
+                    <div style="color:white;" class="form-group">
                         <label asp-for="Input.Email"></label>
                         <input asp-for="Input.Email" class="form-control" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
+                    <div style="color:white;" class="form-group">
                         <label asp-for="Input.Password"></label>
                         <input asp-for="Input.Password" class="form-control" />
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
+                    <div style="color:white;" class="form-group">
                         <div class="checkbox">
                             <label asp-for="Input.RememberMe">
                                 <input asp-for="Input.RememberMe" />
@@ -59,21 +59,21 @@ https://templatemo.com/tm-538-digital-trend
                             </label>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div style="color:white;" class="form-group">
                         <button type="submit" class="btn btn-primary">Log in</button>
                     </div>
-                    <div class="form-group">
+                    <div style="color:white;" class="form-group">
                         <p>
-                            <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                            <a style="color:white;" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
                         </p>
                         <p>
-                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                            <a style="color:white;" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
                         </p>
                         <p>
-                            <a asp-page="#contact">Home Page</a>
+                            <a style="color:white;" asp-page="#contact">Home Page</a>
                         </p>
                         <p>
-                            <a href="/Index">Back to home.</a>
+                            <a style="color:white;" href="/Index">Back to home.</a>
                         </p>
                     </div>
                 </form>
