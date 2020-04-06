@@ -32,6 +32,15 @@ namespace IDDQD
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDbContext<SKLContext>(options =>
+        options.UseSqlite(Configuration.GetConnectionString("SkillContext")));
+        
+        services.AddDbContext<DISPContext>(options =>
+        options.UseSqlite(Configuration.GetConnectionString("DispositionContext")));
+        
+        services.AddDbContext<KNEContext>(options =>
+        options.UseSqlite(Configuration.GetConnectionString("KnowledgeContext")));
+            
             services.AddRazorPages();
         
 
