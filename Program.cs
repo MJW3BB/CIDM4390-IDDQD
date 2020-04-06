@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace CIDM4390_IDDQD
+namespace IDDQD
 {
     public class Program
     {
