@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo\\CIDM4390-IDDQD\\CIDM4390-IDDQD.csproj",
+  "FilePath": "d:\\Media\\Documents\\Code Repository\\West Texas A&M University\\Master\\CIDM4390-IDDQD\\CIDM4390-IDDQD.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20519,42 +20519,6 @@
     "CSharpLanguageVersion": 800
   },
   "RootNamespace": "CIDM4390_IDDQD",
-  "Documents": [
-    {
-      "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo\\CIDM4390-IDDQD\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo\\CIDM4390-IDDQD\\Pages\\_ViewImports.cshtml",
-      "TargetPath": "Pages\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo\\CIDM4390-IDDQD\\Pages\\Shared\\_Layout.cshtml",
-      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo\\CIDM4390-IDDQD\\Pages\\Privacy.cshtml",
-      "TargetPath": "Pages\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo\\CIDM4390-IDDQD\\Pages\\Index.cshtml",
-      "TargetPath": "Pages\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo\\CIDM4390-IDDQD\\Pages\\_ViewStart.cshtml",
-      "TargetPath": "Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\dubs6\\Documents\\CodeRepo\\CIDM4390-IDDQD\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    }
-  ],
+  "Documents": [],
   "SerializationFormat": "0.2"
 }
