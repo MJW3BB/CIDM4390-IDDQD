@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using IDDQD_Data.Data.Models;
 using IDDQD_Repo;
 
-namespace IDDQD.Pages.Competencies
+namespace IDDQD_UI.Pages.Competencies
 {
 
     public class IndexModel : PageModel

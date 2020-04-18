@@ -15,7 +15,7 @@ using IDDQD_Data.Data.Models;
 using IDDQD_Repo;
 using IDDQD.ViewModels;
 
-namespace IDDQD.Pages.Competencies
+namespace IDDQD_UI.Pages.Competencies
 {
     public class Page1Model : PageModel
     {

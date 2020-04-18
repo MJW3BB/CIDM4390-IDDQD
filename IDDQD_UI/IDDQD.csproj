@@ -2,7 +2,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GenerateProgramFile>false</GenerateProgramFile>
+    <TypescriptOutDir>wwwroot</TypescriptOutDir>
     <UserSecretsId>aspnet-IDDQD-D9928AC7-75CF-4B97-81FA-E774DCF1F916</UserSecretsId>
+    <DefaultItemExcludes>$(DefaultItemExcludes);wwwroot\lib.css</DefaultItemExcludes>
   </PropertyGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
