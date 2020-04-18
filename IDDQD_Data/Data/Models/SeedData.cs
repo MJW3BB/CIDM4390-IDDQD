@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace IDDQD.Data
+namespace IDDQD_Data.Data.Models
 {
     public static class SeedData
     {
