@@ -1,0 +1,21 @@
+﻿@page
+@model IDDQD.Pages.Competencies.Page3Model
+@{
+    ViewData["Title"] = "Competency Wizard Page 3";
+}
+<h2>Atomic or Composite Quesiton - Step 3</h2>
+<p class="font-weight-bolder">Atomic or Composite Competency?</p>
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <div>
+            <p class="font-weight-bolder">Session variable inputs</p>        
+        </div>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Competency Builder JSON</li>
+                @* <li class="list-group-item">@HttpContext.Session.GetString(Page1Model.SerializedCompetencyJSONKey)</li> *@
+            </ul>
+        </div>
+    </div>
+</div>
