@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace IDDQD.Data
+namespace IDDQD_Data.Data.Models
 {
     public class Disposition
     {
