@@ -9,11 +9,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.HttpOverrides; // Droplet Use
 using Microsoft.EntityFrameworkCore;
-using IDDQD.Data;
+using IDDQD_Data.Data; // We are calling context not models
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using IDDQD_Data; 
+using Pomelo.EntityFrameworkCore.MySql;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using IDDQD.Middleware;
+using IDDQD_Repo.DependencyInjection;
 
 namespace IDDQD
 {
@@ -46,10 +49,23 @@ namespace IDDQD
         options.Password.RequiredLength = 6;
         options.Password.RequiredUniqueChars = 1;
 
-        // Lockout settings.
-        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-        options.Lockout.MaxFailedAccessAttempts = 5;
-        options.Lockout.AllowedForNewUsers = true;
+        services.AddRazorPages();
+
+        //add database and add UnitOfWork using Wizard Context
+            services.AddDbContext<CDKSTContext>(
+                options => options.UseMySql(Configuration.GetConnectionString("IDDQD_MYSQL_CONNECTION"),
+                                            mySqlOptions => mySqlOptions.ServerVersion(new Version(5, 7, 29), ServerType.MySql)
+                )).AddUnitOfWork<CDKSTContext>();            
+
+    //     services.Configure<IdentityOptions>(options =>
+    //     {
+    //     // Password settings.
+    //     options.Password.RequireDigit = true;
+    //     options.Password.RequireLowercase = true;
+    //     options.Password.RequireNonAlphanumeric = true;
+    //     options.Password.RequireUppercase = true;
+    //     options.Password.RequiredLength = 6;
+    //     options.Password.RequiredUniqueChars = 1;
 
         // User settings.
         options.User.AllowedUserNameCharacters =
