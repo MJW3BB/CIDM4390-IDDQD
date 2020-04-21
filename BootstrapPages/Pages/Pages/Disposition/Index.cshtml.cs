@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using IDDQD.Data;
 using IDDQD.Models;
 
-namespace CIDM4390_IDDQD.Pages.Disposition
+namespace CIDM4390_IDDQD.IDDQD_UI.Pages.Disposition
 {
     public class IndexModel : PageModel
     {

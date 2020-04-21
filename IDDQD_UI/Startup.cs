@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net; // Droplet Use
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Session;
 //using Microsoft.AspNetCore.Identity;
 //using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
@@ -33,7 +34,13 @@ namespace IDDQD
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
 
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromSeconds(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
             /*
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlite(
@@ -108,12 +115,18 @@ namespace IDDQD
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
-
-            app.UseHttpsRedirection();
+            //this can cause headaches when testing locally.
+            //uncomment for deploy
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseHttpsRedirection();
+            //for session variables
+            app.UseHttpContextItemsMiddleware();
+            //app.UseStaticFiles();
             app.UseRouting();
-            app.UseAuthentication();
+            //app.UseAuthentication();
             app.UseAuthorization();
+            app.UseSession();  
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();

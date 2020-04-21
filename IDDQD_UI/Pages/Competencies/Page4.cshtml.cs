@@ -17,7 +17,7 @@ using IDDQD.ViewModels;
 
 namespace IDDQD_UI.Pages.Competencies
 {
-    public class Page3Model : PageModel
+    public class Page4Model : PageModel
     {
         public const string SerializedCompetencyJSONKey = "_CompetencySerliazed";
 
@@ -26,7 +26,7 @@ namespace IDDQD_UI.Pages.Competencies
         private readonly ILogger<Page1Model> _logger;
         private readonly IUnitOfWork _UOW;        
 
-        public Page3Model(ILogger<Page1Model> logger, IUnitOfWork uow)
+        public Page4Model(ILogger<Page1Model> logger, IUnitOfWork uow)
         {
             _logger = logger;
             _UOW = uow;            
