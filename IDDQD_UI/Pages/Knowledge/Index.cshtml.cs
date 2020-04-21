@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using IDDQD_Data.Data.Models;
 using IDDQD_Repo;
 
-namespace IDDQD.Pages.Knowledge
+namespace IDDQD_UI.Pages.Knowledge
 {
     public class IndexModel : PageModel
     {

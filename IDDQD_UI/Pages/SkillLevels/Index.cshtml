@@ -1,49 +1,18 @@
 @page
 @model IDDQD_UI.Pages.SkillLevels.IndexModel
-@{
-    ViewData["Title"] = "Skill Levels";
-    var count = 0;
-}
-
-<div class="text-center">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Cartesian Index</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var skilllevel in Model.SkillLevelsList)
-            {
-                <tr>
-                    <th scope="row">@skilllevel.Id</th>
-                    <td>@skilllevel.Name</td>
-                    <td>@skilllevel.Description</td>
-                    <td>@skilllevel.CartesianIndex</td>
-                </tr>
-                { count++; }
-            }
-        </tbody>
-    </table>
-</div>
-
-@* @page
-@model IDDQD.Pages.Skills.IndexModel
 
 @{
     Layout = null;
 }
 
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Skill Levels";
+    var count = 0;
 }
 
 <head>
 
-<h1>Index</h1>
+@* <h1>Skill Level Index</h1> *@
 
 <!--
 
@@ -83,45 +52,31 @@ https://templatemo.com/tm-538-digital-trend
                             <p>
                                 <a style="color:white;" asp-page="Create">Create New</a>
                             </p>
-                            <table style="color:white;" class="table">
+                            <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.SkillList[0].Title)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.SkillList[0].Date)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.SkillList[0].Description)
-                                        </th>
-                                        <th></th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Cartesian Index</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                            @foreach (var item in Model.SkillList) {
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.Title)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.Date)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.Description)
-                                        </td>
-                                        <td>
-                                            <a style="color:yellow;" asp-page="./Edit" asp-route-id="@item.ID">| Edit</a><br>
-                                            <a style="color:yellow;" asp-page="./Details" asp-route-id="@item.ID">| Details</a><br>
-                                            <a style="color:yellow;" asp-page="./Delete" asp-route-id="@item.ID">| Delete</a>
-                                        </td>
-                                    </tr>
-                            }
+                                    @foreach (var skilllevel in Model.SkillLevelsList)
+                                    {
+                                        <tr>
+                                            <th scope="row">@skilllevel.Id</th>
+                                            <td>@skilllevel.Name</td>
+                                            <td>@skilllevel.Description</td>
+                                            <td>@skilllevel.CartesianIndex</td>
+                                        </tr>
+                                        { count++; }
+                                    }
                                 </tbody>
                             </table>
-
-                            <div>
-                        <a style="color:yellow;" asp-page="/Index">Back to Site</a>
+                        <div>
+                            <a style="color:yellow;" asp-page="/Index">Back to Site</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,4 +93,4 @@ https://templatemo.com/tm-538-digital-trend
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
-</body> *@
+</body>

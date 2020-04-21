@@ -1,54 +1,18 @@
 @page
-@model IDDQD.Pages.Knowledge.IndexModel
-@{
-    ViewData["Title"] = "Knowledge Elements";
-    var count = 0;
-}
-
-<div class="text-center">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Cartesian Index</th>
-                <th scope="col">Semiotic Index</th>
-                <th scope="col">Etymology</th>                
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var ke in Model.KnowledgeElementsList)
-            {
-                <tr>
-                    <th scope="row">@ke.Id</th>
-                    <td>@ke.Name</td>
-                    <td>@ke.Description</td>
-                    <td>@ke.CartesianIndex</td>
-                    <td>@ke.SemioticIndex</td>                    
-                    <td>@ke.Etymology</td>
-                </tr>
-                { count++; }
-            }
-        </tbody>
-    </table>
-</div>
-
-
-@* @page
-@model IDDQD.Pages.Knowledge.IndexModel
+@model IDDQD_UI.Pages.Knowledge.IndexModel
 
 @{
     Layout = null;
 }
 
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Knowledge Elements";
+    var count = 0;
 }
 
 <head>
 
-<h1>Index</h1>
+@* <h1>Knowledge Index</h1> *@
 
 <!--
 
@@ -91,46 +55,46 @@ https://templatemo.com/tm-538-digital-trend
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th style="color:white;">
-                                            @Html.DisplayNameFor(model => model.KnowledgeElementsList[0].Title)
-                                        </th>
-                                        <th style="color:white;">
-                                            @Html.DisplayNameFor(model => model.KnowledgeElementsList[0].Date)
-                                        </th>
-                                        <th style="color:white;">
-                                            @Html.DisplayNameFor(model => model.KnowledgeElementsList[0].Description)
-                                        </th>
-                                        <th></th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Cartesian Index</th>
+                                        <th scope="col">Semiotic Index</th>
+                                        <th scope="col">Etymology</th>                
                                     </tr>
                                 </thead>
                                 <tbody>
-                            @foreach (var item in Model.KnowledgeElementsList) {
-                                    <tr>
-                                        <td style="color:white;">
-                                            @Html.DisplayFor(modelItem => item.Title)
-                                        </td>
-                                        <td style="color:white;">
-                                            @Html.DisplayFor(modelItem => item.Date)
-                                        </td>
-                                        <td style="color:white;">
-                                            @Html.DisplayFor(modelItem => item.Description)
-                                        </td>
-                                        <td style="color:yellow;">
-                                            <a style="color:yellow;" asp-page="./Edit" asp-route-id="@item.ID">| Edit</a> <br>|
-                                            <a style="color:yellow;" asp-page="./Details" asp-route-id="@item.ID">Details</a> <br>|
-                                            <a style="color:yellow;" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-                                        </td>
-                                    </tr>
-
-                                    
-                            }
+                                    @foreach (var ke in Model.KnowledgeElementsList)
+                                    {
+                                        <tr>
+                                            <th scope="row">@ke.Id</th>
+                                            <td>@ke.Name</td>
+                                            <td>@ke.Description</td>
+                                            <td>@ke.CartesianIndex</td>
+                                            <td>@ke.SemioticIndex</td>                    
+                                            <td>@ke.Etymology</td>
+                                        </tr>
+                                        { count++; }
+                                    }
                                 </tbody>
                             </table>
                         </div>
-                    <div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="text-right">
+                            <a class="btn btn-link text-dark" href="./Index" role="button">Back to List</a>
+                            <a class="btn btn-link text-dark" href="/Index" role="button">Back to Site</a>
+                            @* <button type="button" asp-page="./Index" class="btn btn-dark btn-sm">Back to List</button><br>
+                            <button type="button" asp-page="/Index" class="btn btn-dark btn-sm">Back to Site</button> *@
+                            @* <a class="button" style="color:white;" asp-page="./Index">Back to List</a><br><br>
+                            <a class="button" style="color:black;" asp-page="/Index">Back to Site</a> *@
+                        </div>
+                    @* <div>
                         <a style="color:yellow;" asp-page="./Index">Back to List</a><br>
-                        <a style="color:yellow;" asp-page="#contact">Back to Site</a>
-                    </div>
+                        <a style="color:yellow;" asp-page="/Index">Back to Site</a>
+                    </div> *@
                 </div>
             </div>
         </div>
@@ -143,4 +107,4 @@ https://templatemo.com/tm-538-digital-trend
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
-</body> *@
+</body>
