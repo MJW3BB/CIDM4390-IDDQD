@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj": {}
+    "D:\\Media\\Documents\\Code Repository\\Backups\\CIDM4390-IDDQD 5\\IDDQD.csproj": {}
   },
   "projects": {
-    "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj": {
+    "D:\\Media\\Documents\\Code Repository\\Backups\\CIDM4390-IDDQD 5\\IDDQD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj",
+        "projectUniqueName": "D:\\Media\\Documents\\Code Repository\\Backups\\CIDM4390-IDDQD 5\\IDDQD.csproj",
         "projectName": "IDDQD",
-        "projectPath": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\IDDQD.csproj",
+        "projectPath": "D:\\Media\\Documents\\Code Repository\\Backups\\CIDM4390-IDDQD 5\\IDDQD.csproj",
         "packagesPath": "C:\\Users\\mjweb\\.nuget\\packages\\",
-        "outputPath": "D:\\Media\\Documents\\Code Repository\\West Texas A&M University\\CIDM4390-IDDQD\\obj\\",
+        "outputPath": "D:\\Media\\Documents\\Code Repository\\Backups\\CIDM4390-IDDQD 5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mjweb\\AppData\\Roaming\\NuGet\\NuGet.Config"
