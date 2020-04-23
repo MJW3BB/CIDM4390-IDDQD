@@ -5,8 +5,9 @@ using System.Net; // Droplet Use
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Session;
-//using Microsoft.AspNetCore.Identity;
-//using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.HttpOverrides; // Droplet Use
@@ -19,6 +20,8 @@ using Pomelo.EntityFrameworkCore.MySql;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using IDDQD.Middleware;
 using IDDQD_Repo.DependencyInjection;
+
+using IDDQD.Areas.Identity.Data;
 
 namespace IDDQD
 {
@@ -36,7 +39,8 @@ namespace IDDQD
         {
             services.AddDistributedMemoryCache();
 
-            services.AddSession(options => {
+            services.AddSession(options =>
+            {
                 options.IdleTimeout = TimeSpan.FromSeconds(30);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
@@ -57,45 +61,51 @@ namespace IDDQD
         options.UseSqlite(Configuration.GetConnectionString("KnowledgeContext")));
           */
 
-        services.AddRazorPages();
+            services.AddRazorPages();
 
-        //add database and add UnitOfWork using Wizard Context
+            //add database and add UnitOfWork using CDKST Context
             services.AddDbContext<CDKSTContext>(
                 options => options.UseMySql(Configuration.GetConnectionString("IDDQD_MYSQL_CONNECTION"),
                                             mySqlOptions => mySqlOptions.ServerVersion(new Version(5, 7, 29), ServerType.MySql)
-                )).AddUnitOfWork<CDKSTContext>();            
+                )).AddUnitOfWork<CDKSTContext>();
 
-    //     services.Configure<IdentityOptions>(options =>
-    //     {
-    //     // Password settings.
-    //     options.Password.RequireDigit = true;
-    //     options.Password.RequireLowercase = true;
-    //     options.Password.RequireNonAlphanumeric = true;
-    //     options.Password.RequireUppercase = true;
-    //     options.Password.RequiredLength = 6;
-    //     options.Password.RequiredUniqueChars = 1;
+            services.AddDbContext<IDDQDIdentityDbContext>(options =>
+            options.UseMySql(Configuration.GetConnectionString("IDDQD_ID_CONNECTION"), mySqlOptions =>
+                        mySqlOptions.ServerVersion(new Version(5, 7, 29), ServerType.MySql)));
+            services.AddDefaultIdentity<IdentityUser>(
+            options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<IDDQDIdentityDbContext>();
 
-    //     // Lockout settings.
-    //     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-    //     options.Lockout.MaxFailedAccessAttempts = 5;
-    //     options.Lockout.AllowedForNewUsers = true;
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings.
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 1;
 
-    //     // User settings.
-    //     options.User.AllowedUserNameCharacters =
-    //     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
-    //     options.User.RequireUniqueEmail = false;
-    // });
-    services.ConfigureApplicationCookie(options =>
-    {
+                // Lockout settings.
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.Lockout.AllowedForNewUsers = true;
+
+                // User settings.
+                options.User.AllowedUserNameCharacters =
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = false;
+            });
+            services.ConfigureApplicationCookie(options =>
+            {
         // Cookie settings
         options.Cookie.HttpOnly = true;
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
-        options.LoginPath = "/Identity/Account/Login";
-        options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-        options.SlidingExpiration = true;
-    });
-}
+                options.LoginPath = "/Identity/Account/Login";
+                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                options.SlidingExpiration = true;
+            });
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -126,7 +136,7 @@ namespace IDDQD
             app.UseRouting();
             //app.UseAuthentication();
             app.UseAuthorization();
-            app.UseSession();  
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
