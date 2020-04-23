@@ -15,32 +15,25 @@ using IDDQD_Data.Data.Models;
 using IDDQD_Repo;
 using IDDQD.ViewModels;
 
-namespace IDDQD_UI.Pages.Competencies
+namespace IDDQD.Pages.Competencies
 {
     public class Page5Model : PageModel
     {
         public const string SerializedCompetencyJSONKey = "_CompetencySerliazed";
-
         public CompetencyBuilderViewModel Cbvm {get; set;}
-
         private readonly ILogger<Page1Model> _logger;
         private readonly IUnitOfWork _UOW;        
-
         public Page5Model(ILogger<Page1Model> logger, IUnitOfWork uow)
         {
             _logger = logger;
             _UOW = uow;            
         }
-
         public async Task OnGetAsync()
         {
-
             await HttpContext.Session.LoadAsync();            
-
             //read serialized object from session variable
             var serializedin = HttpContext.Session.GetString(SerializedCompetencyJSONKey);
-            Cbvm = JsonSerializer.Deserialize<CompetencyBuilderViewModel>(serializedin);
-            
+            Cbvm = JsonSerializer.Deserialize<CompetencyBuilderViewModel>(serializedin);    
         }
     }
 }

@@ -288,3 +288,6 @@ __pycache__/
 # End of https://www.gitignore.io/api/aspnetcore,visualstudiocode
 
 obj/Debug/netcoreapp3.1/CIDM4390-IDDQD.assets.cache
+
+# DOTENV
+.env

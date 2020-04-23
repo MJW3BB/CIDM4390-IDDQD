@@ -22,6 +22,7 @@ using IDDQD.Middleware;
 using IDDQD_Repo.DependencyInjection;
 
 using IDDQD.Areas.Identity.Data;
+using IDDQD.Services;
 
 namespace IDDQD
 {
@@ -60,7 +61,7 @@ namespace IDDQD
         services.AddDbContext<KNEContext>(options =>
         options.UseSqlite(Configuration.GetConnectionString("KnowledgeContext")));
           */
-
+            services.AddTransient<IEmailSender, EmailSender>();
             services.AddRazorPages();
 
             //add database and add UnitOfWork using CDKST Context
