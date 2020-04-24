@@ -1,95 +1,45 @@
 ﻿@page
-@model IDDQD_UI.Pages.Competencies.Page3Model
-
-@{
-    Layout=null;
-}
-
+@model IDDQD.Pages.Competencies.Page3Model
 @{
     ViewData["Title"] = "Competency Wizard Page 3";
 }
 
-@* @using Microsoft.AspNetCore.Http *@
 
-    <title>Competency Curricula 2020</title>
+<div class="jumbotron text-center">
+    <h1 class="mx-auto my-0 text-uppercase">Step 3</h1>
+<h3 class="font-weight-bolder">Atomic or Composite Competency?</h3>
+</div>
 
-<head>
 
-@* <h1>Disposition Index</h1> *@
-
-<!--
-
-DIGITAL TREND
-
-https://templatemo.com/tm-538-digital-trend
-
--->
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="stylesheet" href="~/css/bootstrap.min.css">
-     <link rel="stylesheet" href="~/css/font-awesome.min.css">
-     <link rel="stylesheet" href="~/css/aos.css">
-     <link rel="stylesheet" href="~/css/owl.carousel.min.css">
-     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
-
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="~/css/templatemo-digital-trend.css">
-
-</head>
-
-<body>
-
-     <!-- HERO -->
-     <section class="hero hero-bg d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
-                    <div class="hero-text">
-
-                        <h2>Atomic or Composite Quesiton - Step 3</h2>
-                        <p class="font-weight-bolder">Atomic or Composite Competency?</p>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div>
-                                    <p class="font-weight-bolder">Session variable inputs</p>        
-                                </div>
-                                <div class="card" style="width: 18rem;">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Competency Builder JSON</li>
-                                        <li class="list-group-item">@HttpContext.Session.GetString(IDDQD_UI.Pages.Competencies.Page3Model.SerializedCompetencyJSONKey)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                            <br>
-                            <div class="text-right">
-                                <a class="btn btn-link text-dark" href="./Index" role="button">Back to List</a>
-                                <a class="btn btn-link text-dark" href="/Index" role="button">Back to Site</a>
-                                @* <button type="button" asp-page="./Index" class="btn btn-dark btn-sm">Back to List</button><br>
-                                <button type="button" asp-page="/Index" class="btn btn-dark btn-sm">Back to Site</button> *@
-                                @* <a class="button" style="color:white;" asp-page="./Index">Back to List</a><br><br>
-                                <a class="button" style="color:black;" asp-page="/Index">Back to Site</a> *@
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <div>
+            <p class="font-weight-bolder">Session variable inputs</p>        
         </div>
-     </section>
-
-    <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
-</body>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Competency Builder JSON</li>
+                <li class="list-group-item">@HttpContext.Session.GetString(Page1Model.SerializedCompetencyJSONKey)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <form method="post">
+            @foreach (var comp in Model.CompetencyTypes)
+            {
+                <input type="radio" asp-for="IsComposite" value="@comp" />@comp<br />
+            }
+            <input type="hidden" asp-for="CompetencyName">
+            <input type="hidden" asp-for="CompetencyDescription">
+            
+            @for (int i = 0; i < Model.DispositionIndicies.Count(); i++)
+            {
+                <input type="hidden" asp-for="DispositionIndicies[i]">
+            }
+            <input type="hidden" asp-for="IsComposite">
+            <input type="submit"/>
+   
+        </form>
+    </div>
+</div>
