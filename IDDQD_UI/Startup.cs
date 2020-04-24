@@ -20,12 +20,9 @@ using Pomelo.EntityFrameworkCore.MySql;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using IDDQD.Middleware;
 using IDDQD_Repo.DependencyInjection;
-<<<<<<< HEAD
-=======
 
 using IDDQD.Areas.Identity.Data;
 using IDDQD.Services;
->>>>>>> devops
 
 namespace IDDQD
 {
@@ -67,31 +64,11 @@ namespace IDDQD
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddRazorPages();
 
-<<<<<<< HEAD
-        services.AddRazorPages();
-
-        //add database and add UnitOfWork using Wizard Context
-            services.AddDbContext<CDKSTContext>(
-                options => options.UseMySql(Configuration.GetConnectionString("IDDQD_MYSQL_CONNECTION"),
-                                            mySqlOptions => mySqlOptions.ServerVersion(new Version(5, 7, 29), ServerType.MySql)
-                )).AddUnitOfWork<CDKSTContext>();            
-
-    //     services.Configure<IdentityOptions>(options =>
-    //     {
-    //     // Password settings.
-    //     options.Password.RequireDigit = true;
-    //     options.Password.RequireLowercase = true;
-    //     options.Password.RequireNonAlphanumeric = true;
-    //     options.Password.RequireUppercase = true;
-    //     options.Password.RequiredLength = 6;
-    //     options.Password.RequiredUniqueChars = 1;
-=======
             //add database and add UnitOfWork using CDKST Context
             services.AddDbContext<CDKSTContext>(
                 options => options.UseMySql(Configuration.GetConnectionString("IDDQD_MYSQL_CONNECTION"),
                                             mySqlOptions => mySqlOptions.ServerVersion(new Version(5, 7, 29), ServerType.MySql)
                 )).AddUnitOfWork<CDKSTContext>();
->>>>>>> devops
 
             services.AddDbContext<IDDQDIdentityDbContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("IDDQD_ID_CONNECTION"), mySqlOptions =>

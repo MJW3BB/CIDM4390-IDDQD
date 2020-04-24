@@ -15,11 +15,7 @@ using IDDQD_Data.Data.Models;
 using IDDQD_Repo;
 using IDDQD.ViewModels;
 
-<<<<<<< HEAD
-namespace IDDQD_UI.Pages.Competencies
-=======
 namespace IDDQD.Pages.Competencies
->>>>>>> devops
 {
     public class Page2Model : PageModel
     {
