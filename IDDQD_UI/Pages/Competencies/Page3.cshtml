@@ -1,0 +1,45 @@
+﻿@page
+@model IDDQD.Pages.Competencies.Page3Model
+@{
+    ViewData["Title"] = "Competency Wizard Page 3";
+}
+
+
+<div class="jumbotron text-center">
+    <h1 class="mx-auto my-0 text-uppercase">Step 3</h1>
+<h3 class="font-weight-bolder">Atomic or Composite Competency?</h3>
+</div>
+
+
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <div>
+            <p class="font-weight-bolder">Session variable inputs</p>        
+        </div>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Competency Builder JSON</li>
+                <li class="list-group-item">@HttpContext.Session.GetString(Page1Model.SerializedCompetencyJSONKey)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <form method="post">
+            @foreach (var comp in Model.CompetencyTypes)
+            {
+                <input type="radio" asp-for="IsComposite" value="@comp" />@comp<br />
+            }
+            <input type="hidden" asp-for="CompetencyName">
+            <input type="hidden" asp-for="CompetencyDescription">
+            
+            @for (int i = 0; i < Model.DispositionIndicies.Count(); i++)
+            {
+                <input type="hidden" asp-for="DispositionIndicies[i]">
+            }
+            <input type="hidden" asp-for="IsComposite">
+            <input type="submit"/>
+   
+        </form>
+    </div>
+</div>
