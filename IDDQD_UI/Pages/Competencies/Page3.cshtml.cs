@@ -11,6 +11,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Session;
 using Microsoft.Extensions.Logging;
+<<<<<<< HEAD
+using IDDQD_Data.Data.Models;
+using IDDQD_Repo;
+using IDDQD.ViewModels;
+
+namespace IDDQD_UI.Pages.Competencies
+{
+    public class Page3Model : PageModel
+    {
+        public const string SerializedCompetencyJSONKey = "_CompetencySerliazed";
+=======
 using IDDQD_Data.Data;
 using IDDQD_Repo;
 using IDDQD.ViewModels;
@@ -35,6 +46,7 @@ namespace IDDQD.Pages.Competencies
         [BindProperty]
         public string IsComposite { get; set; }
         public string[] CompetencyTypes = new[] { "Atomic", "Composite"};
+>>>>>>> devops
 
         public CompetencyBuilderViewModel Cbvm {get; set;}
 
@@ -44,6 +56,14 @@ namespace IDDQD.Pages.Competencies
         public Page3Model(ILogger<Page1Model> logger, IUnitOfWork uow)
         {
             _logger = logger;
+<<<<<<< HEAD
+            _UOW = uow;            
+        }
+
+        public async Task OnGetAsync()
+        {
+
+=======
             _UOW = uow;
         }
 
@@ -51,10 +71,18 @@ namespace IDDQD.Pages.Competencies
         public async Task OnGetAsync()
         {
             //wheres my session at
+>>>>>>> devops
             await HttpContext.Session.LoadAsync();            
 
             //read serialized object from session variable
             var serializedin = HttpContext.Session.GetString(SerializedCompetencyJSONKey);
+<<<<<<< HEAD
+            Cbvm = JsonSerializer.Deserialize<CompetencyBuilderViewModel>(serializedin);
+            
+        }
+    }
+}
+=======
             //save it to Cbvm
             Cbvm = JsonSerializer.Deserialize<CompetencyBuilderViewModel>(serializedin);
             //fill my variables with the session contents
@@ -123,3 +151,4 @@ namespace IDDQD.Pages.Competencies
 
     }
 }
+>>>>>>> devops
