@@ -1,0 +1,98 @@
+@* @page
+@model IDDQD.Pages.Disposition.EditModel
+
+@{
+    Layout = null;
+}
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<head>
+
+<h1>Edit</h1>
+
+<!--
+
+DIGITAL TREND
+
+https://templatemo.com/tm-538-digital-trend
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="~/css/bootstrap.min.css">
+     <link rel="stylesheet" href="~/css/font-awesome.min.css">
+     <link rel="stylesheet" href="~/css/aos.css">
+     <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="~/css/templatemo-digital-trend.css">
+
+</head>
+
+<body>
+
+     <!-- HERO -->
+     <section class="hero hero-bg d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                    <div class="hero-text">
+
+                        <h4 style="color:white;">Dispositions</h4>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <input type="hidden" asp-for="Dispositions.ID" />
+                                    <div style="color:white;" class="form-group">
+                                        <label asp-for="Dispositions.Title" class="control-label"></label>
+                                        <input asp-for="Dispositions.Title" class="form-control" />
+                                        <span asp-validation-for="Dispositions.Title" class="text-danger"></span>
+                                    </div>
+                                    <div style="color:white;" class="form-group">
+                                        <label asp-for="Dispositions.Date" class="control-label"></label>
+                                        <input asp-for="Dispositions.Date" class="form-control" />
+                                        <span asp-validation-for="Dispositions.Date" class="text-danger"></span>
+                                    </div>
+                                    <div style="color:white;" class="form-group">
+                                        <label asp-for="Dispositions.Description" class="control-label"></label>
+                                        <input asp-for="Dispositions.Description" class="form-control" />
+                                        <span asp-validation-for="Dispositions.Description" class="text-danger"></span>
+                                    </div>
+                                    <div style="color:white;" class="form-group">
+                                        <input type="submit" value="Save" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <div>
+                                <a style="color:yellow;" asp-page="./Index">| Back to List</a><br>
+                                <a style="color:yellow;" asp-page="/Index">| Back to Site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+
+<!-- SCRIPTS -->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+</body> *@

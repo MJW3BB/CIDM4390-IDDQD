@@ -1,0 +1,32 @@
+﻿@page
+@model IDDQD.Pages.Competencies.IndexModel
+@{
+    ViewData["Title"] = "Competencies";
+    int count = 0;
+}
+
+<h1>Competencies</h1>
+<div class="container p-2">
+    <button type="button" class="btn btn-primary btn-lg">Create New Competency</button>
+</div>
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var competency in Model.CompetencyList)
+            {
+                <tr>
+                    <th scope="row">@competency.Id</th>
+                    <td>@competency.Name</td>
+                    <td>@competency.Description</td>
+                </tr>
+                { count++; }
+            }
+        </tbody>
+    </table>

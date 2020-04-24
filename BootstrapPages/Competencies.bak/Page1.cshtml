@@ -1,0 +1,65 @@
+﻿@page
+@using Microsoft.AspNetCore.Http
+@model IDDQD.Pages.Competencies.Page1Model
+@{
+    ViewData["Title"] = "Competency Wizard Page 1";
+}
+<h2>Create Competency - Step 1</h2>
+<p class="font-weight-bolder">Provide competency name and description.</p>
+<form method="post">
+    <div class="form-group row">
+        <label asp-for="CompetencyName" class="col-4 col-form-label"></label>
+        <div class="col-8">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div> 
+                <input asp-for="CompetencyName" placeholder="Competency Name" 
+                       type="text" class="form-control" 
+                       aria-describedby="competencyNameHelpBlock" 
+                       required="required">
+            </div> 
+            <span asp-for="CompetencyName" id="competencyNameHelpBlock" 
+                  class="form-text text-muted">
+                    Provide an appropriately-descriptive name.
+            </span>
+        </div>
+    </div> 
+    <div class="form-group row">
+        <label for="competencyDescription" 
+               class="col-4 col-form-label">Competency Description</label> 
+        <div class="col-8">
+            <textarea id="competencyDescription" name="competencyDescription" 
+                      cols="40" rows="5" class="form-control" 
+                      aria-describedby="competencyDescriptionHelpBlock" 
+                      required="required">
+            </textarea> 
+            <span id="competencyDescriptionHelpBlock" 
+                  class="form-text text-muted">
+                    Provide a competency description that summarizes the set of 
+                    tasks of constituent competencies.
+            </span>
+        </div>
+    </div>     
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary">
+                Step 2             
+                <i class="fas fa-angle-double-right"></i>
+            </button>
+        </div>
+    </div>
+</form>
+
+@* <hr>    
+<div>
+    <p class="font-weight-bolder">Data binding outputs</p>        
+</div>
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.CompetencyName</li>
+        <li class="list-group-item">@Model.CompetencyDescription</li>
+    </ul>
+</div> *@

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
-using IDDQD.Data;
+using IDDQD_Data.Data.Models;
 using IDDQD_Repo;
 using IDDQD_Repo.DependencyInjection;
 
-namespace IDDQD.Data
+namespace IDDQD_Data.Data
 {
     public class CDKSTContext : DbContext
     {
