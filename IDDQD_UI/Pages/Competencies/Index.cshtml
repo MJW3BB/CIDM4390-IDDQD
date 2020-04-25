@@ -10,8 +10,6 @@
     int count = 0;
 }
 
-@* @using Microsoft.AspNetCore.Http *@
-
 <head>
 
 @* <h1>Disposition Index</h1> *@
@@ -81,7 +79,7 @@ https://templatemo.com/tm-538-digital-trend
     </nav>
 
      <!-- HERO -->
-     <section class="hero hero-bg d-flex justify-content-center align-items-center">
+    <section class="hero hero-bg d-flex justify-content-center align-items-center">
         <div class="container">
             <div class="row">
 
@@ -112,18 +110,19 @@ https://templatemo.com/tm-538-digital-trend
                                     }
                                 </tbody>
                             </table><br>
+                        </div>
                         <br>
                         <br>
-                        <div class="text-right">
-                            <a class="btn btn-link text-dark" href="./Index" role="button">Back to List</a>
-                            <a class="btn btn-link text-dark" href="/Index" role="button">Back to Site</a>
-                        @* <div>
-                            <a style="color:yellow;" asp-page="./Index">Back to List</a><br>
-                            <a style="color:yellow;" asp-page="/Index">Back to Site</a>
-                        </div> *@
+
                     </div>
                 </div>
             </div>
+
+            <div class="text-right">
+                @* <a class="btn btn-link text-light font-weight-bold font-size: 150%" href="./Index" role="button">Back to List</a> *@
+                <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="/Index" role="button">Back to Site</a>
+            </div>
+
         </div>
      </section>
 

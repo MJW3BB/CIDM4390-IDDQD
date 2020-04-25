@@ -11,9 +11,6 @@
 }
 
 <head>
-
-@* <h1>Skill Level Index</h1> *@
-
 <!--
 
 DIGITAL TREND
@@ -41,6 +38,43 @@ https://templatemo.com/tm-538-digital-trend
 
 <body>
 
+    <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/Index">
+            <i class="fa fa-line-chart"></i>
+            Competency Curricula 2020
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="IDDQD_UI/Pages/Identity/Account/Login" class="nav-link contact">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Competencies/Index" class="nav-link smoothScroll">Competencies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Dispositions/Index" class="nav-link smoothScroll">Disposition</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Knowledge/Index" class="nav-link smoothScroll">Knowledge</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/SkillLevels/Index" class="nav-link">Skills</a>
+                </li>
+                @* <li class="nav-item">
+                    <a href="/Privacy" class="nav-link smoothScroll">Privacy</a>
+                </li> *@
+            </ul>
+        </div>
+    </div>
+</nav>
+
      <!-- HERO -->
      <section class="hero hero-bg d-flex justify-content-center align-items-center">
         <div class="container" text-color="white">
@@ -55,30 +89,32 @@ https://templatemo.com/tm-538-digital-trend
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Description</th>
-                                        <th scope="col">Cartesian Index</th>
+                                        <th class="text-white" scope="col">ID</th>
+                                        <th class="text-white" scope="col">Name</th>
+                                        <th class="text-white" scope="col">Description</th>
+                                        <th class="text-white" scope="col">Cartesian Index</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var skilllevel in Model.SkillLevelsList)
                                     {
                                         <tr>
-                                            <th scope="row">@skilllevel.Id</th>
-                                            <td>@skilllevel.Name</td>
-                                            <td>@skilllevel.Description</td>
-                                            <td>@skilllevel.CartesianIndex</td>
+                                            <th class="text-white" scope="row">@skilllevel.Id</th>
+                                            <td class="text-white">@skilllevel.Name</td>
+                                            <td class="text-white">@skilllevel.Description</td>
+                                            <td class="text-white">@skilllevel.CartesianIndex</td>
                                         </tr>
                                         { count++; }
                                     }
                                 </tbody>
                             </table>
-                        <div>
-                            <a style="color:yellow;" asp-page="/Index">Back to Site</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="text-right">
+                @* <a class="btn btn-link text-light font-weight-bold font-size: 150%" href="./Index" role="button">Back to List</a> *@
+                <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="/Index" role="button">Back to Site</a>
             </div>
         </div>
      </section>
