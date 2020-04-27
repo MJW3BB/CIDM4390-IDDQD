@@ -29,10 +29,12 @@ namespace IDDQD.Pages.Competencies
         [BindProperty]
         [Display(Name="Competency Description")]        
         public string CompetencyDescription {get; set;}
+        [Display(Name="Disposition Indicies")]        
+        public int[] DispositionIndicies {get; set;}
 
-        [BindProperty]
-        public IEnumerable<Disposition> DispositionList {get; set;}   
-
+        // [BindProperty]
+        // public IEnumerable<Disposition> DispositionList {get; set;}   
+        
         [BindProperty]
         public List<DispositionSelectorModel> DispositionDisplayList  {get; set;}
 
@@ -84,7 +86,8 @@ namespace IDDQD.Pages.Competencies
                     _logger.LogInformation($"Added: {dsm.Id.ToString()} to the indicies");
                     _logger.LogInformation(dsm.Name);
                 }
-            }            
+            }
+            DispositionIndicies = temp.ToArray();
 
             if(string.IsNullOrEmpty(HttpContext.Session.GetString(SerializedCompetencyJSONKey)))
             {
@@ -108,7 +111,8 @@ namespace IDDQD.Pages.Competencies
                 _logger.LogInformation($"IN POST PAGE 2, Session out: {Cbvm.CompetencyName}");
                 Cbvm.CompetencyDescription = CompetencyDescription;
                 _logger.LogInformation($"IN POST PAGE 2, Session out: {Cbvm.CompetencyDescription}");
-                Cbvm.DispositionIndicies = temp.ToArray();                
+                Cbvm.DispositionIndicies = temp.ToArray();
+                _logger.LogInformation($"IN POST PAGE 2, Session out: {Cbvm.DispositionIndicies}");                
 
                 var serializedout = JsonSerializer.Serialize(Cbvm);
                 _logger.LogInformation($"IN POST PAGE 2, Serialized out: {serializedout.ToString()}");
