@@ -52,25 +52,25 @@ https://templatemo.com/tm-538-digital-trend
                 <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
                     <div class="hero-text">
 
-                        <h2>Select Dispositions - Step 2</h2>
-                        <p class="font-weight-bolder">Select Dispositions for the competency.</p>
+                        <h2 class="text-white">Select Dispositions - Step 2</h2>
+                        <p class="font-weight-bolder text-white">Select Dispositions for the competency.</p>
                         <hr>
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div style="display: none;" class="col-sm-4">
                                 <div>
-                                    <p class="font-weight-bolder">Session variable inputs</p>        
+                                    <p class="font-weight-bolder" type="hidden">Session variable inputs</p>        
                                 </div>
-                                <div class="card" style="width: 18rem;">
+                                <div type="hidden" class="card" style="width: 18rem;">
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Competency Builder JSON</li>
-                                        <li class="list-group-item">@HttpContext.Session.GetString(IDDQD.Pages.Competencies.Page1Model.SerializedCompetencyJSONKey)</li>
+                                        <li type="hidden" class="list-group-item">Competency Builder JSON</li>
+                                        <li type="hidden" class="list-group-item">@HttpContext.Session.GetString(IDDQD.Pages.Competencies.Page1Model.SerializedCompetencyJSONKey)</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-sm-12">
                                 <div>
-                                    <p><strong>Competency Name</strong>: @Model.CompetencyName</p>
-                                    <p><strong>Competency Description</strong>: @Model.CompetencyDescription</p>
+                                    <p class="text-white"><strong>Competency Name</strong>: @Model.CompetencyName</p>
+                                    <p class="text-white"><strong>Competency Description</strong>: @Model.CompetencyDescription</p>
                                 </div>
                                 <div>
                                     <form method="post">
@@ -78,12 +78,12 @@ https://templatemo.com/tm-538-digital-trend
                                             <table class="table table-sm">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">ID</th>
-                                                        <th scope="col">Name</th>
-                                                        <th scope="col">Description</th>
-                                                        <th scope="col">Category</th>
-                                                        <th scope="col">Discipline</th>
-                                                        <th scope="col">Select</th>
+                                                        <th class="text-white" scope="col">ID</th>
+                                                        <th class="text-white" scope="col">Name</th>
+                                                        <th class="text-white" scope="col">Description</th>
+                                                        <th class="text-white" scope="col">Category</th>
+                                                        <th class="text-white" scope="col">Discipline</th>
+                                                        <th class="text-white" scope="col">Select</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -101,10 +101,10 @@ https://templatemo.com/tm-538-digital-trend
                                                                     asp-for="DispositionDisplayList[i].Name" />
                                                                 @Model.DispositionDisplayList[i].Name
                                                             </td>
-                                                            <td>@Model.DispositionDisplayList[i].Description</td>
-                                                            <td>@Model.DispositionDisplayList[i].Category</td>
-                                                            <td>@Model.DispositionDisplayList[i].Discipline</td>
-                                                            <td><input asp-for="DispositionDisplayList[i].Selected"></td>
+                                                            <td class="text-white">@Model.DispositionDisplayList[i].Description</td>
+                                                            <td class="text-white">@Model.DispositionDisplayList[i].Category</td>
+                                                            <td class="text-white">@Model.DispositionDisplayList[i].Discipline</td>
+                                                            <td class="text-white"><input asp-for="DispositionDisplayList[i].Selected"></td>
                                                         </tr>
                                                     }
                                                 </tbody>
@@ -114,6 +114,7 @@ https://templatemo.com/tm-538-digital-trend
                                             @* These are important to take advantage of the BindProperty *@
                                             <input type="hidden" asp-for="CompetencyName">
                                             <input type="hidden" asp-for="CompetencyDescription">
+                                            <input type="hidden" asp-for="DispositionIndicies">
                                             <button name="submit" type="submit" class="btn btn-primary">
                                                 Step 3
                                                 <i class="fas fa-angle-double-right"></i>
@@ -130,7 +131,7 @@ https://templatemo.com/tm-538-digital-trend
                 </div>
             </div>
             <div class="text-right">
-                <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="./Index" role="button">Back to List</a>
+                @* <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="./Index" role="button">Back to List</a> *@
                 <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="/Index" role="button">Back to Site</a>
             </div>
         </div>
