@@ -40,7 +40,6 @@ https://templatemo.com/tm-538-digital-trend
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="/Index">
@@ -56,7 +55,7 @@ https://templatemo.com/tm-538-digital-trend
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="/Identity/Account/Login" class="nav-link contact">Sign In</a>
+                        <a href="IDDQD_UI/Pages/Identity/Account/Login" class="nav-link contact">Sign In</a>
                     </li>
                     <li class="nav-item">
                         <a href="/Competencies/Index" class="nav-link smoothScroll">Competencies</a>
@@ -84,43 +83,54 @@ https://templatemo.com/tm-538-digital-trend
             <div class="row">
 
                 <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
-                    <div class="hero-text">
-
-                        @* <p>
-                            <a style ="color:white;" asp-page="Create">Create New</a>
-                        </p> *@
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th class="text-white" 150%scope="col">ID</th>
-                                    <th class="text-white" 150%scope="col">Name</th>
-                                    <th class="text-white" 150%scope="col">Description</th>
-                                    <th class="text-white" 150%scope="col">Cartesian Index</th>
-                                    <th class="text-white" 150%scope="col">Semiotic Index</th>
-                                    <th class="text-white" 150%scope="col">Etymology</th>                
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var ke in Model.KnowledgeElementsList)
-                                {
-                                    <tr class="text-white">
-                                        <th scope="row">@ke.Id</th>
-                                        <td>@ke.Name</td>
-                                        <td>@ke.Description</td>
-                                        <td>@ke.CartesianIndex</td>
-                                        <td>@ke.SemioticIndex</td>                    
-                                        <td>@ke.Etymology</td>
+                        <div class="hero-text">
+                                <h4 style="color:white;">Knowledge Elements</h4>
+                               @*<a style ="color:white;" asp-page="Create">Create New</a>*@
+                            <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Cartesian Index</th>
+                                        <th scope="col">Semiotic Index</th>
+                                        <th scope="col">Etymology</th>                
                                     </tr>
-                                    { count++; }
-                                }
-                            </tbody>
-                        </table>
-                    </div>
+                                </thead>
+                                <tbody>
+                                    @foreach (var ke in Model.KnowledgeElementsList)
+                                    {
+                                        <tr>
+                                            <th scope="row">@ke.Id</th>
+                                            <td>@ke.Name</td>
+                                            <td>@ke.Description</td>
+                                            <td>@ke.CartesianIndex</td>
+                                            <td>@ke.SemioticIndex</td>                    
+                                            <td>@ke.Etymology</td>
+                                        </tr>
+                                        { count++; }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="text-right">
+                            <a class="btn btn-link text-dark" href="./Index" role="button">Back to List</a>
+                            <a class="btn btn-link text-dark" href="/Index" role="button">Back to Site</a>
+                            @* <button type="button" asp-page="./Index" class="btn btn-dark btn-sm">Back to List</button><br>
+                            <button type="button" asp-page="/Index" class="btn btn-dark btn-sm">Back to Site</button> *@
+                            @* <a class="button" style="color:white;" asp-page="./Index">Back to List</a><br><br>
+                            <a class="button" style="color:black;" asp-page="/Index">Back to Site</a> *@
+                        </div>
+                    @* <div>
+                        <a style="color:yellow;" asp-page="./Index">Back to List</a><br>
+                        <a style="color:yellow;" asp-page="/Index">Back to Site</a>
+                    </div> *@
                 </div>
-            </div>
-            <div class="text-right">
-                @* <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="./Index" role="button" style="font-size: 10px";>Back to List</a> *@
-                <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="/Index" role="button">Back to Site</a>
             </div>
         </div>
      </section>
