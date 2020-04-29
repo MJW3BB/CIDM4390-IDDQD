@@ -82,20 +82,23 @@ https://templatemo.com/tm-538-digital-trend
 
      <!-- HERO -->
      <section class="hero hero-bg d-flex justify-content-center align-items-center">
-        <div class="container">
+        <div class="container" text-color="white">
             <div class="row">
 
                 <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
                     <div class="hero-text">
 
-                        <div class="container p-2">
+                        @*<div class="container p-2">
                             <a href="./Page1" style="font-size:30px;" class="nav-link contact">Create your Competency!</a>
-                        </div>
-                        <div class="text-center">
+                        </div>*@
+                        <p>
+                           <a href="./Page1" style="font-size:30px;" class="nav-link contact">Create your Competency!</a> 
+                        </p>
+                        @*<div class="text-center">*@
                             <table class="table">
                                 <thead>
-                                    <tr class="text-white">
-                                        <th scope="col">Id</th>
+                                    <tr>
+                                        <th scope="col">ID</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Description</th>
                                     </tr>
@@ -111,16 +114,15 @@ https://templatemo.com/tm-538-digital-trend
                                         { count++; }
                                     }
                                 </tbody>
-                            </table><br>
+                            </table>
+                            </div>
+                        </div>
+                        <br>
                         <br>
                         <br>
                         <div class="text-right">
                             <a class="btn btn-link text-dark" href="./Index" role="button">Back to List</a>
                             <a class="btn btn-link text-dark" href="/Index" role="button">Back to Site</a>
-                        @* <div>
-                            <a style="color:yellow;" asp-page="./Index">Back to List</a><br>
-                            <a style="color:yellow;" asp-page="/Index">Back to Site</a>
-                        </div> *@
                     </div>
                 </div>
             </div>
