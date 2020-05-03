@@ -60,11 +60,11 @@ namespace IDDQD.Pages.Competencies
             var serializedin = HttpContext.Session.GetString(SerializedCompetencyJSONKey);
             Cbvm = JsonSerializer.Deserialize<CompetencyBuilderViewModel>(serializedin);              
 
-            //read into bound properties
+            //read into bound properties from the session variable
             CompetencyName = Cbvm.CompetencyName;
             CompetencyDescription = Cbvm.CompetencyDescription;
 
-            //get dispositions
+            //get dispositions grab crap from database
             var repository = _UOW.GetRepositoryAsync<Disposition>();
             IEnumerable<Disposition> dlist = await repository.GetListAsync();
             DispositionDisplayList = GetDispositionDisplayList(dlist.ToList());

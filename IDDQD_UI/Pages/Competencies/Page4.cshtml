@@ -6,7 +6,7 @@
 }
 
 @{
-    ViewData["Title"] = "Competency Wizard Page 3";
+    ViewData["Title"] = "Competency Wizard Page 4";
 }
 
 <head>
@@ -60,10 +60,104 @@ https://templatemo.com/tm-538-digital-trend
                                         <li class="list-group-item">@HttpContext.Session.GetString(IDDQD.Pages.Competencies.Page3Model.SerializedCompetencyJSONKey)</li>
                                     </ul>
                                 </div>
-                                <button name="submit" href="/Page4" type="submit" class="btn btn-primary">
-                                    Step 3
-                                    <i class="fas fa-angle-double-right"></i>
-                                </button>
+                                <form method="POST">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                   ID 
+                                                </th> 
+                                                <th>
+                                                   Name 
+                                                </th> 
+                                                <th>
+                                                   Description 
+                                                </th>
+                                                <th>
+                                                   Cartesian Index
+                                                </th>
+                                                <th>
+                                                   Semiotic Index
+                                                </th> 
+                                                <th>
+                                                    Etymology
+                                                </th>  
+                                                <th>
+                                                    Selected
+                                                </th>
+                                                <th>
+                                                    Skill Level
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @* https://www.learnrazorpages.com/razor-pages/forms/checkboxes#collections-of-complex-objects *@
+                                            @for (var i = 0; i < Model.KnowledgeDispList.Count(); i++)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        @Model.KnowledgeDispList[i].Id
+                                                    </td> 
+                                                    <td>
+                                                        @Model.KnowledgeDispList[i].Name 
+                                                    </td> 
+                                                    <td>
+                                                        @Model.KnowledgeDispList[i].Description 
+                                                    </td>
+                                                    <td>
+                                                        @Model.KnowledgeDispList[i].CartesianIndex
+                                                    </td>
+                                                    <td>
+                                                        @Model.KnowledgeDispList[i].SemioticIndex
+                                                    </td> 
+                                                    <td>
+                                                        @Model.KnowledgeDispList[i].Etymology
+                                                    </td>  
+                                                    <td> 
+                                                        <input type="checkbox" class="form-check-input" asp-for="@Model.KnowledgeDispList[i].Selected">
+                                                    </td>
+                                                    <td>
+                                                        @Model.KnowledgeDispList[i].SkillLevel
+                                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" asp-for="@Model.KnowledgeDispList[i].SkillLevel">
+                                                         <option selected>Choose a Skill
+                                                         </option>  
+                                                         @foreach (var skill in Model.SkillLevelList)
+                                                            {
+                                                             <option value="@skill.Id">@skill.Name</option>
+                                                            }
+                                                            </select>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                    @* NEED TO MAKE A FORM THAT THE USERS SEES HERE *@
+                                    @* https://www.learnrazorpages.com/razor-pages/forms/checkboxes#collections-of-complex-objects *@
+                                    <input type="hidden" asp-for="CompetencyName">
+                                    <input type="hidden" asp-for="CompetencyDescription">
+                                    @* <input type="hidden" asp-for="DispositionIndicies"> *@
+
+                                    @for (int i = 0; i < Model.DispositionIndicies.Count(); i++)
+                                    {
+                                    <input type="hidden" asp-for="DispositionIndicies[i]">
+                                    } 
+                                    @for (int i = 0; i < Model.KnowledgeDispList.Count(); i++)
+                                    {
+                                    <input type="hidden" asp-for="KnowledgeDispList[i].Id">
+                                    <input type="hidden" asp-for="KnowledgeDispList[i].Name">
+                                    <input type="hidden" asp-for="KnowledgeDispList[i].CartesianIndex">
+                                    <input type="hidden" asp-for="KnowledgeDispList[i].SemioticIndex">
+                                    <input type="hidden" asp-for="KnowledgeDispList[i].Etymology">
+                                    <input type="hidden" asp-for="KnowledgeDispList[i].Selected">
+                                    <input type="hidden" asp-for="KnowledgeDispList[i].SkillLevel">
+                                    <input type="hidden" asp-for="KnowledgeDispList[i].Description">
+                                    } 
+
+
+                                    <button type="submit" class="btn btn-primary">
+                                    Step 4
+                                    </button>
+                                </form> 
                             </div>
                             <br>
                             <br>
