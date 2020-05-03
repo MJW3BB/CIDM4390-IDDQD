@@ -85,12 +85,10 @@ https://templatemo.com/tm-538-digital-trend
                 <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
                     <div class="hero-text">
 
-                        <div class="jumbotron text-center">
-                            <h1 class="mx-auto my-0 text-uppercase">Step 3</h1>
-                        <h3 class="font-weight-bolder">Atomic or Composite Competency?</h3>
+                        <div class="container">
+                                <h1 class="text-white">Step 3</h1>
+                                <h3>Is this an Atomic or Composite competency?</h3>
                         </div>
-
-
                         <hr>
                         <div class="row">
                             <div style="display: none;" class="col-sm-4">
@@ -119,11 +117,9 @@ https://templatemo.com/tm-538-digital-trend
                                         <input type="hidden" asp-for="DispositionIndicies[i]">
                                     }
                                     <input type="hidden" asp-for="IsComposite">
-                                    @* <button name="submit" href="/Page4" type="submit" class="btn btn-primary">
-                                        Step 3
-                                        <i class="fas fa-angle-double-right"></i>
-                                    </button> *@
-                                    <input type="submit"/>
+                                    <button name="submit" type="submit" class="btn btn-danger">
+                                        Next
+                                    </button>
                         
                                 </form>
                             </div>
@@ -134,11 +130,16 @@ https://templatemo.com/tm-538-digital-trend
 
             <div class="text-right">
                 @* <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="./Index" role="button">Back to List</a> *@
-                <a class="btn btn-link text-dark font-weight-bold font-size: 150%" href="/Index" role="button">Back to Site</a>
+                <a class="btn btn-success" href="/Index" role="button">Back to Site</a>
             </div>
 
         </div>
      </section>
+
+     <footer class="site-footer">
+        <div class="container">
+        </div>
+    </footer>
 
     <!-- SCRIPTS -->
      <script src="js/jquery.min.js"></script>

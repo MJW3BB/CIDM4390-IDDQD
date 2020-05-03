@@ -31,11 +31,11 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   :root {
-    --primary-color:        #363636;
-    --secondary-color:      #f1c111;
+    --primary-color:        #0055ef;
+    --secondary-color:      #00ff3a;
     --white-color:          #ffffff;
     --dark-color:           #171819;
-    --project-bg:           #f0f8ff;
+    --project-bg:           #0055ef;
     --menu-bg:              #272727;
 
     --title-color:          #15141a;
@@ -107,7 +107,7 @@ https://templatemo.com/tm-538-digital-trend
   b, 
   strong {
     letter-spacing: 0;
-    color: var(--secondary-color);
+    color: var(--white-color);
   }
 
 
@@ -348,7 +348,7 @@ https://templatemo.com/tm-538-digital-trend
   }
 
   .hero-bg {
-    background: linear-gradient(170deg, var(--primary-color) 64%, var(--white-color) 30%);
+    background: linear-gradient(170deg, var(--primary-color) 64%, var(--primary-color) 30%);
   }
 
   .hero-image {
