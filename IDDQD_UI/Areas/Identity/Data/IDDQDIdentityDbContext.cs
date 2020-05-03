@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using IDDQD.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace IDDQD.Areas.Identity.Data
 {

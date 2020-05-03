@@ -6,7 +6,6 @@ namespace IDDQD_Data.Data.Models
 {
     public class KSPair
     {
-
         public int Id {get; set;}
         public KnowledgeElement KnowledgeElement {get; set;}        
         public SkillLevel SkillLevel {get; set;}
