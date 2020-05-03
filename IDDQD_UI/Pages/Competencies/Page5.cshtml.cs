@@ -120,6 +120,9 @@ namespace IDDQD.Pages.Competencies
         {
             _logger.LogInformation("IN ON POST ASYNC");
 
+            _logger.LogInformation(knowledgeElementList.Count.ToString());
+            _logger.LogInformation(SkillLevelList.Count.ToString());
+
             await HttpContext.Session.LoadAsync();
 
             var repok=_UOW.GetRepositoryAsync<KnowledgeElement>();
@@ -127,13 +130,21 @@ namespace IDDQD.Pages.Competencies
             var repod=_UOW.GetRepositoryAsync<Disposition>();
             var repoc=_UOW.GetRepositoryAsync<Competency>();
 
+            _logger.LogInformation("ON POST REPO");
+
             IEnumerable<KnowledgeElement>ListofKE=await repok.GetListAsync();
             IEnumerable<SkillLevel>ListofKS=await repos.GetListAsync();
             IEnumerable<Disposition>ListofDisp=await repod.GetListAsync();
 
+            _logger.LogInformation("ON POST Enumrable");
+
             List <KnowledgeElement> TempKnowledgeElementList = ListofKE.ToList();
             List <SkillLevel> TempSkillLevelList = ListofKS.ToList();
             List <Disposition> TempDispositionList = ListofDisp.ToList();
+
+            _logger.LogInformation("ON POST TEMP LIST");
+
+
 
            foreach(Disposition i in TempDispositionList)
            {    
@@ -145,26 +156,53 @@ namespace IDDQD.Pages.Competencies
                    }
                }
            }
-           foreach(KnowledgeElement i in TempKnowledgeElementList)
-           {    
-               foreach(int x in KSPairsIndicies)
-               {
-                   if(i.Id==x&&x%2==0)
-                   {
-                       knowledgeElementList.Add(i);
-                   }
-               }
-           }
-           foreach(SkillLevel i in TempSkillLevelList)
-           {    
-               foreach(int x in KSPairsIndicies)
-               {
-                   if(i.Id==x&&x%2==1)
-                   {
-                       SkillLevelList.Add(i);
-                   }
-               }
-           }
+
+           for(int i = 0; i< KSPairsIndicies.Length; i++){
+                //Even indices are my knowledges 
+                if(i%2==0)
+                {
+                    foreach (var item in TempKnowledgeElementList)
+                    {
+                        if(item.Id == KSPairsIndicies[i])
+                        {
+                            knowledgeElementList.Add(item);
+                        }
+                    }
+                }
+                else
+                {//The Odd indices are skills
+                   foreach (var item in TempSkillLevelList)
+                    {
+                        if(item.Id == KSPairsIndicies[i])
+                        {
+                            SkillLevelList.Add(item);
+                        }
+                    }
+                }
+            }
+            _logger.LogInformation(SkillLevelList.Count.ToString());
+            _logger.LogInformation(knowledgeElementList.Count.ToString());
+        //    foreach(KnowledgeElement i in TempKnowledgeElementList)
+        //    {    
+        //        foreach(int x in KSPairsIndicies)
+        //        {
+        //            if(i.Id==x&&x%2==0)
+        //            {
+        //                knowledgeElementList.Add(i);
+        //            }
+        //        }
+        //    }
+           
+        //    foreach(SkillLevel i in TempSkillLevelList)
+        //    {    
+        //        foreach(int x in KSPairsIndicies)
+        //        {
+        //            if(i.Id==x&&x%2==1)
+        //            {
+        //                SkillLevelList.Add(i);
+        //            }
+        //        }
+        //    }
             List <CompetencyDisposition> CDList=new List <CompetencyDisposition>();
             foreach(var CDDisp in dispositionList)
             {
