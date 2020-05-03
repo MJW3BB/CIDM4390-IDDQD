@@ -1,8 +1,10 @@
 # xUnit Testing
+1. implement the following code, with proper names for files
+2. inside the unit-testing-using-dotnet-test file, run <dotnet test>
+3. the program will run the tests and verify if the email input is proper
 
 
-
-## Commands to create the solution (Example): 
+### Commands to create the solution (Example): 
 ("https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test")
 
 * dotnet new sln -o unit-testing-using-dotnet-test
