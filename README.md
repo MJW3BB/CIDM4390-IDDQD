@@ -2,6 +2,7 @@
 Official Code Repository for the project in coursework enrolled at West Texas A&M University
 ## Repository Structure
 ![layout](https://github.com/MJW3BB/CIDM4390-IDDQD/blob/master/resources/images/Repo%20Layout.png) 
+# Further documentation on the project such as Portfilio and Essay can be found in resources/docs
 ## Members & Roles
 * UI/UX - Walter (Dubs) Lasley
 * SCRUM Master - Haley Smith 
