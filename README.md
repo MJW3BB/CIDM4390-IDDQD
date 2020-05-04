@@ -1,7 +1,7 @@
 # CIDM-4390: 2020SP SOFTWARE SYS DEVEL
 Official Code Repository for the project in coursework enrolled at West Texas A&M University
 ## Repository Structure
-![layout](https://raw.githubusercontent.com/MJW3BB/CIDM4390-IDDQD/devops/Docs/Repo%20Layout.png) 
+![layout](https://github.com/MJW3BB/CIDM4390-IDDQD/blob/master/resources/images/Repo%20Layout.png) 
 ## Members & Roles
 * UI/UX - Walter (Dubs) Lasley
 * SCRUM Master - Haley Smith 
