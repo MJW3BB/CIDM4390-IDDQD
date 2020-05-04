@@ -82,12 +82,11 @@ https://templatemo.com/tm-538-digital-trend
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
-                    <div class="hero-text">
-
-                        <div class="container">
+                <div class="col-lg-10 col-md-5 col-12 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <div class="container text-white">
                                 <h1 class="text-white">Step 3</h1>
-                                <h3>Is this an Atomic or Composite competency?</h3>
+                                <h3 calss="text-white">Is this an Atomic or Composite competency?</h3>
                         </div>
                         <hr>
                         <div class="row">
@@ -114,9 +113,9 @@ https://templatemo.com/tm-538-digital-trend
                                     
                                     @for (int i = 0; i < Model.DispositionIndicies.Count(); i++)
                                     {
-                                        <input type="hidden" asp-for="DispositionIndicies[i]">
+                                        <input class ="text-white" type="hidden" asp-for="DispositionIndicies[i]">
                                     }
-                                    <input type="hidden" asp-for="IsComposite">
+                                    <input class ="text-white" type="hidden" asp-for="IsComposite">
                                     <button name="submit" type="submit" class="btn btn-danger">
                                         Next
                                     </button>

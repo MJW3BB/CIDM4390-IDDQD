@@ -57,7 +57,7 @@ https://templatemo.com/tm-538-digital-trend
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="IDDQD_UI/Pages/Identity/Account/Login" class="nav-link contact">Sign In</a>
+                        <a href="/Identity/Account/Login" class="nav-link contact">Sign In</a>
                     </li>
                     <li class="nav-item">
                         <a href="/Competencies/Index" class="nav-link smoothScroll">Competencies</a>
@@ -84,27 +84,27 @@ https://templatemo.com/tm-538-digital-trend
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-12 col-md-12 col-12 d-flex flex-column justify-content-center align-items-center">
                     <div class="hero-text">
                         <h4 style="color:white;">Dispositions</h4>
                         <div>
                             <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Description</th>
-                                            <th scope="col">Category</th>
+                                            <th class="text-white" scope="col">ID</th>
+                                            <th class="text-white" scope="col">Name</th>
+                                            <th class="text-white" scope="col">Description</th>
+                                            <th class="text-white" scope="col">Category</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                             @foreach (var disposition in Model.DispositionList)
                                             {
                                                 <tr>
-                                                    <th scope="row">@disposition.Id</th>
-                                                    <td>@disposition.Name</td>
-                                                    <td>@disposition.Description</td>
-                                                    <td>@disposition.Category</td>
+                                                    <th class="text-white" scope="row">@disposition.Id</th>
+                                                    <td class="text-white" >@disposition.Name</td>
+                                                    <td class="text-white" >@disposition.Description</td>
+                                                    <td class="text-white" >@disposition.Category</td>
                                                 </tr>
                                             { count++; }
                                             }
@@ -115,14 +115,14 @@ https://templatemo.com/tm-538-digital-trend
                         <br>
                         <br>
                         <br>
-                        <div class="text-right">
-                            <a class="btn btn-link text-dark" href="./Index" role="button">Back to List</a>
-                            <a class="btn btn-link text-dark" href="/Index" role="button">Back to Site</a>
+                        @* <div class="text-right"> *@
+                            @* <a class="btn btn-link text-dark" href="./Index" role="button">Back to List</a>
+                            <a class="btn btn-link text-dark" href="/Index" role="button">Back to Site</a> *@
                             @* <button type="button" asp-page="./Index" class="btn btn-dark btn-sm">Back to List</button><br>
                             <button type="button" asp-page="/Index" class="btn btn-dark btn-sm">Back to Site</button> *@
                             @* <a class="button" style="color:white;" asp-page="./Index">Back to List</a><br><br>
                             <a class="button" style="color:black;" asp-page="/Index">Back to Site</a> *@
-                        </div>
+                        @* </div> *@
                         @* <div>
                             <a style="color:yellow;" asp-page="./Index">Back to List</a><br>
                             <a style="color:yellow;" asp-page="/Index">Back to Site</a>

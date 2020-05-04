@@ -85,7 +85,7 @@ https://templatemo.com/tm-538-digital-trend
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-12 col-md-12 col-12 d-flex flex-column justify-content-center align-items-center">
                     <div class="hero-text">
 
                         <h2 class="text-white">Select Dispositions - Step 2</h2>
@@ -114,12 +114,12 @@ https://templatemo.com/tm-538-digital-trend
                                             <table class="table table-sm">
                                                 <thead>
                                                     <tr>
-                                                        <th class="text-black" scope="col">ID</th>
-                                                        <th class="text-black" scope="col">Name</th>
-                                                        <th class="text-black" scope="col">Description</th>
-                                                        <th class="text-black" scope="col">Category</th>
-                                                        <th class="text-black" scope="col">Discipline</th>
-                                                        <th class="text-black" scope="col">Select</th>
+                                                        <th class="text-white" scope="col">ID</th>
+                                                        <th class="text-white" scope="col">Name</th>
+                                                        <th class="text-white" scope="col">Description</th>
+                                                        <th class="text-white" scope="col">Category</th>
+                                                        <th class="text-white" scope="col">Discipline</th>
+                                                        <th class="text-white" scope="col">Select</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -127,20 +127,20 @@ https://templatemo.com/tm-538-digital-trend
                                                     @for (var i = 0; i < Model.DispositionDisplayList.Count(); i++)
                                                     {
                                                         <tr>
-                                                            <th scope="row">
+                                                            <th class ="text-white" scope="row">
                                                                 <input type="hidden" 
                                                                     asp-for="DispositionDisplayList[i].Id" />
                                                                 @Model.DispositionDisplayList[i].Id
                                                             </th>
-                                                            <td>
+                                                            <td class ="text-white">
                                                                 <input type="hidden" 
                                                                     asp-for="DispositionDisplayList[i].Name" />
                                                                 @Model.DispositionDisplayList[i].Name
                                                             </td>
-                                                            <td class="text-black">@Model.DispositionDisplayList[i].Description</td>
-                                                            <td class="text-black">@Model.DispositionDisplayList[i].Category</td>
-                                                            <td class="text-black">@Model.DispositionDisplayList[i].Discipline</td>
-                                                            <td class="text-black"><input asp-for="DispositionDisplayList[i].Selected"></td>
+                                                            <td class="text-white">@Model.DispositionDisplayList[i].Description</td>
+                                                            <td class="text-white">@Model.DispositionDisplayList[i].Category</td>
+                                                            <td class="text-white">@Model.DispositionDisplayList[i].Discipline</td>
+                                                            <td class="text-white"><input asp-for="DispositionDisplayList[i].Selected"></td>
                                                         </tr>
                                                     }
                                                 </tbody>

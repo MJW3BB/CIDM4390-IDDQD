@@ -58,7 +58,7 @@ https://templatemo.com/tm-538-digital-trend
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="IDDQD_UI/Pages/Identity/Account/Login" class="nav-link contact">Sign In</a>
+                        <a href="/Identity/Account/Login" class="nav-link contact">Sign In</a>
                     </li>
                     <li class="nav-item">
                         <a href="/Competencies/Index" class="nav-link smoothScroll">Competencies</a>
@@ -85,31 +85,35 @@ https://templatemo.com/tm-538-digital-trend
         <div class="container" text-color="#0055ef">
             <div class="row">
 
-                <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-12 col-md-12 col-12 d-flex flex-column justify-content-center align-items-center">
                     <div class="hero-text">
 
                         @*<div class="container p-2">
                             <a href="./Page1" style="font-size:30px;" class="nav-link contact">Create your Competency!</a>
                         </div>*@
                         <p>
-                           <a href="./Page1" style="font-size:30px;" class="nav-link contact">Create your Competency!</a> 
+                            <div class="spinner-grow text-light" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div> 
+                           <a href="./Page1" style="font-size:30px;" class="btn btn-success">Create your Competency!</a>
+                           
                         </p>
                         @*<div class="text-center">*@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Description</th>
+                                        <th class="text-white" scope="col">ID</th>
+                                        <th class="text-white" scope="col">Name</th>
+                                        <th class="text-white" scope="col">Description</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var competency in Model.CompetencyList)
                                     {
                                         <tr>
-                                            <th scope="row">@competency.Id</th>
-                                            <td>@competency.Name</td>
-                                            <td>@competency.Description</td>
+                                            <th class="text-white" scope="row">@competency.Id</th>
+                                            <td class="text-white" >@competency.Name</td>
+                                            <td class="text-white" >@competency.Description</td>
                                         </tr>
                                         { count++; }
                                     }
